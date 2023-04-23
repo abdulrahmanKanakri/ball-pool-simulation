@@ -21,19 +21,19 @@ export class Mouse {
     return this._instance;
   }
 
-  onMouseMove(e: MouseEvent) {
+  onMove(e: MouseEvent) {
     this.position.x = e.pageX;
     this.position.y = e.pageY;
   }
 
-  onMouseDown(e: MouseEvent) {
+  onClickPressed(e: MouseEvent) {
     if (e.which === 1) {
       this.leftButtonPressed = true;
       this.leftButtonReleased = false;
     }
   }
 
-  onMouseUp(e: MouseEvent) {
+  onClickReleased(e: MouseEvent) {
     if (e.which === 1) {
       this.leftButtonPressed = false;
       this.leftButtonReleased = true;

@@ -4,14 +4,17 @@ import { Table } from "./app/Table";
 import { Mouse } from "./utils/Mouse";
 
 const mouse = Mouse.instance();
+
 document.onmousemove = (ev) => {
-  mouse.onMouseMove(ev);
+  mouse.onMove(ev);
 };
+
 document.onmousedown = (ev) => {
-  mouse.onMouseDown(ev);
+  mouse.onClickPressed(ev);
 };
+
 document.onmouseup = (ev) => {
-  mouse.onMouseUp(ev);
+  mouse.onClickReleased(ev);
 };
 
 const table = new Table();

@@ -69,7 +69,9 @@ export class Game {
 
   run() {
     setInterval(() => {
-      requestAnimationFrame(this.update.bind(this));
+      requestAnimationFrame(() => {
+        this.update();
+      });
     }, configs.game.fps * 1000);
   }
 }
